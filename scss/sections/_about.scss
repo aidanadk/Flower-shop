@@ -1,0 +1,48 @@
+.about {
+    color: $text-GrayBlue50;
+    padding-top: vh(95);
+    &__container {
+        text-align: center;
+    }
+    .row{
+        margin: vw(-15);
+    }
+    &-item{
+    margin: vw(15);
+    background: $bg-white;
+    padding: vw(60) vw(60) vw(90) vw(60);
+    border-radius: vw(10);
+    box-shadow: 0 vw(2) vw(5) rgba(54, 61, 77, 0.03);
+    }
+    &__card{
+        @include font(vw(16), 600, vh(25));
+        color: $text-GrayBlue70;
+        text-align: center;
+        &-text{
+            @include font(vw(16), 600, vh(30));
+            color: $text-GrayBlue70;
+            text-align: center;
+            
+        }
+    }
+}
+@media screen and(max-width: 1024px) {
+    .about {
+        padding-top: vmin(95);
+        .row{
+            margin: vmin(-15);
+        }
+        &-item{
+        margin: vmin(15);
+        padding: vmin(60) vmin(60) vmin(90) vmin(60);
+        border-radius: vmin(10);
+        box-shadow: 0 vmin(2) vmin(5) rgba(54, 61, 77, 0.03);
+        }
+        &__card{
+            @include font(vmin(16), 600, vmin(25));
+            &-text{
+                @include font(vmin(16), 600, vmin(30));
+            }
+        }
+    }
+}
