@@ -426,6 +426,7 @@
 @media screen and (max-width: 1024px) {
   .about {
     padding-top: 25.33333vmin;
+    margin-bottom: 26.66667vmin;
   }
   .about .row {
     margin: -4vmin;
@@ -617,42 +618,59 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .service {
-    padding: 33.33333vmin;
+  .service .container {
+    padding: 0;
   }
-  .service__row {
-    margin-bottom: 33.33333vmin;
+  .service__row:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .service .bg-text {
+    display: none;
   }
   .service-item.service-item__image {
     padding: 13.33333vmin;
     min-height: 93.33333vmin;
   }
   .service-item.service-item__image img {
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 93.33333vmin;
     border-radius: 2.66667vmin;
   }
   .service-item.service-item__image .play {
-    border-radius: 8vmin;
+    border-radius: 6.66667vmin;
     width: 16vmin;
     height: 16vmin;
     -webkit-box-shadow: 0 2.66667vmin 8vmin #e62e7b;
             box-shadow: 0 2.66667vmin 8vmin #e62e7b;
   }
   .service-item.service-item__image .play:hover {
-    -webkit-box-shadow: 0 0.625vw 1.875vw #ffffff;
-            box-shadow: 0 0.625vw 1.875vw #ffffff;
+    -webkit-box-shadow: 0 2.66667vmin 8vmin #ffffff;
+            box-shadow: 0 2.66667vmin 8vmin #ffffff;
   }
   .service-item.service-item__image .service-item__subtitle {
     font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 600;
-    font-size: 4.26667vmin;
-    line-height: 8vmin;
+    font-size: 3.73333vmin;
+    line-height: 6.93333vmin;
+  }
+  .service .next {
+    bottom: vwmin(50);
+    right: 13.33333vmin;
+    border-radius: 8vmin;
+    width: 16vmin;
+    height: 16vmin;
   }
   .service-item {
-    padding: 0 33.33333vmin;
+    padding: 0;
   }
   .service-item__title {
+    margin-top: 0;
+    margin-bottom: 2.66667vmin;
     font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 400;
@@ -667,14 +685,11 @@
     line-height: 8vmin;
   }
   .service-item__link svg {
-    margin-left: 14.66667vmin;
+    margin-left: 6.66667vmin;
   }
-  .service .next {
-    bottom: 13.33333vmin;
-    right: 13.33333vmin;
-    border-radius: 8vmin;
-    width: 16vmin;
-    height: 16vmin;
+  .service .pink-btn {
+    display: inline-block;
+    margin-top: 5.33333vmin;
   }
 }
 
@@ -918,33 +933,34 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .location {
+  .social .container {
+    max-width: 100%;
+    padding: 0 18.66667vmin;
+  }
+  .social .location {
     padding-bottom: 32vmin;
   }
-  .location__map .map {
-    height: 144vmin;
+  .social .location__map .map {
+    min-height: 213.33333vmin;
   }
-  .location-modal {
-    right: 10.66667vmin;
+  .social .location-modal {
+    right: 2.66667vmin;
     bottom: 10.66667vmin;
     padding: 14.66667vmin;
   }
-  .location-modal img {
+  .social .location-modal img {
     margin-right: 9.6vmin;
-    width: 53.33333vmin;
+    width: 5.33333vmin;
     height: 5.33333vmin;
   }
-  .location-modal__item {
+  .social .location-modal__item {
     font-family: "SF Pro Display";
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 3.46667vmin;
     line-height: 6.66667vmin;
-    margin-bottom: 1.5625vw;
-    color: #6b7a99;
-  }
-  .location-modal span + span {
-    margin-left: 0.9375vw;
+    margin-bottom: 6.66667vmin;
+    margin-left: 26.66667vmin;
   }
 }
 
@@ -1020,6 +1036,31 @@
 .social-item:hover .social-item__link {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 1024px) {
+  .social {
+    margin-top: 26.66667vmin;
+  }
+  .social .slick-prev.slick-arrow,
+  .social .slick-next.slick-arrow {
+    top: -72vmin;
+    width: 5.33333vmin;
+    height: 5.33333vmin;
+    -webkit-box-shadow: 0px 0.53333vmin 1.33333vmin rgba(54, 61, 77, 0.05);
+            box-shadow: 0px 0.53333vmin 1.33333vmin rgba(54, 61, 77, 0.05);
+  }
+  .social .title {
+    margin-bottom: 44vmin;
+  }
+  .social-item {
+    padding: 5.33333vmin;
+  }
+  .social-item__link {
+    width: 21.33333vmin;
+    height: 21.33333vmin;
+    border-radius: 32vmin;
+  }
 }
 
 .footer {
@@ -1148,83 +1189,75 @@
 
 @media screen and (max-width: 1024px) {
   .footer {
-    margin-top: 13.33333vmin;
+    margin-top: 33.33333vmin;
   }
   .footer__info {
-    height: 2.66667vmin;
-    padding: 21.33333vmin 0;
+    height: 18.66667vmin;
+    padding: 16vmin 5.33333vmin;
     width: 26.66667vmin;
   }
   .footer__logo {
     font-family: "SF Pro Display";
     font-style: normal;
-    font-weight: 500;
-    font-size: 4vmin;
+    font-weight: 700;
+    font-size: 6.4vmin;
     line-height: 8vmin;
-    width: 18.66667vmin;
   }
   .footer__menu {
-    top: 21.33333vmin;
-    left: 26.66667vmin;
-    width: 53.33333vmin;
-    height: 5.33333vmin;
+    position: absolute;
+    top: 8vmin;
+    left: 61.33333vmin;
+    width: 20vw;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
   }
   .footer__link {
-    font-family: "SF Pro Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.86667vmin;
-    line-height: 6.66667vmin;
-    padding: 5.33333vmin;
-  }
-  .footer__row {
     font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
     font-size: 3.46667vmin;
     line-height: 6.66667vmin;
     color: #7D8FB3;
-    padding-bottom: 2.66667vmin;
+    padding: 1.25vw;
+    padding-top: 0;
+    text-decoration: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__row {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.46667vmin;
+    line-height: 6.66667vmin;
+    width: 26.66667vmin;
+    height: 2.66667vmin;
   }
   .footer__evaluate {
     display: none;
   }
   .footer__title {
-    font-family: "SF Pro Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.66667vmin;
-    line-height: 5.33333vmin;
-    color: #7D8FB3;
-    padding-top: 5.33333vmin;
-    width: 80vmin;
-  }
-  .footer__title svg {
-    padding-left: 5.33333vmin;
+    display: none;
   }
   .footer__bottom {
-    top: 8vmin;
-    left: 0;
-    padding: 8vmin;
+    top: 2.66667vmin;
     font-family: "SF Pro Display";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 700;
     font-size: 3.46667vmin;
-    line-height: 1.33333vmin;
+    line-height: 6.66667vmin;
   }
   .footer__bottom p {
-    width: 66.66667vmin;
+    width: 80vmin;
   }
   .footer__bottom .rules {
-    top: 8vmin;
-    padding-left: 40vmin;
-  }
-  .footer__bottom span {
     display: none;
-    padding-left: 5.33333vmin;
   }
   .footer hr {
-    width: 100%;
     height: 0.53333vmin;
   }
 }
@@ -1370,6 +1403,47 @@ img {
   .container {
     max-width: 100%;
     padding: 0 8vmin;
+  }
+  .pink-btn {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2vmin;
+    line-height: 5.33333vmin;
+    padding: 1.33333vmin 4.53333vmin;
+    border-radius: 8vmin;
+  }
+  .bg-text {
+    display: none;
+  }
+  .title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.6vmin;
+    line-height: 16vmin;
+    margin: 17.33333vmin 0 17.33333vmin;
+  }
+  .title__bg-text {
+    display: none;
+  }
+  .text {
+    width: 80vmin;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.73333vmin;
+    line-height: 8vmin;
+    padding-bottom: 18.66667vmin;
+  }
+  .badge {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2vmin;
+    line-height: 5.33333vmin;
+    border-radius: 8vmin;
+    padding: 1.33333vmin 3.2vmin;
   }
 }
 /*# sourceMappingURL=index.css.map */

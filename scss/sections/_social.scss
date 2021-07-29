@@ -48,3 +48,26 @@
     }
   }
 }
+.social{
+  @include mobile {
+    margin-top: vmin(100);
+    .slick-prev.slick-arrow,
+    .slick-next.slick-arrow {
+    top: vmin(-270);
+    width: vmin(20);
+    height: vmin(20);
+    box-shadow: 0px vmin(2) vmin(5) rgba(54, 61, 77, 0.05);
+  }
+  .title {
+    margin-bottom: vmin(165);
+  }
+  &-item {
+    padding: vmin(20);
+    &__link {
+      width: vmin(80);
+      height: vmin(80);
+      border-radius: vmin(120);
+    }
+  }
+  }
+  }

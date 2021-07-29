@@ -42,36 +42,35 @@
     }
   }
 } 
-@media screen and(max-width: 1024px) {
-  .location {
-    padding-bottom: vmin(120);
-    &__map {
-      .map {
-        height: vmin(540);
+  .social{
+    @include mobile {
+      .container{
+        max-width:  100%;
+        padding: 0 vmin(70);
       }
-    }
-    &-modal {
-      right: vmin(40);
-      bottom: vmin(40);
-      padding: vmin(55);
-      img {
-        margin-right: vmin(36);
-        width: vmin(200);
-        height: vmin(20);
-      }
-      &__item {
-        @include font(vmin(13), 600, vmin(25));
-        
-        margin-bottom: vw(25);
-        color: $text-GrayBlue60;
+      .location {
+        padding-bottom: vmin(120);
+        &__map {
+          .map {
+            min-height: vmin(800);
+          }
         }
-        span + span {
-          margin-left: vw(15);
+        &-modal {
+          right: vmin(10);
+          bottom: vmin(40);
+          padding: vmin(55);
+          img {
+            margin-right: vmin(36);
+            width: vmin(20);
+            height: vmin(20);
+          }
+          &__item {
+            @include font(vmin(13), 700, vmin(25));
+            margin-bottom: vmin(25);
+            margin-left: vmin(100);
+          }
         }
-      }
+      } 
     }
-  }
-  @media screen and(max-width: 1024px) {
-    
   }
 

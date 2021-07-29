@@ -120,4 +120,29 @@ img {
         max-width:  100%;
         padding: 0 vmin(30);
     }
+    .pink-btn{
+        @include font(vmin(12), 800, vmin(20));
+        padding: vmin(5) vmin(17);
+        border-radius: vmin(30);
+    }
+    .bg-text {
+        display: none
+    }
+    .title {
+        @include font(vmin(36), 400, vmin(60));
+        margin: vmin(65) 0 vmin(65);
+        &__bg-text {
+            display: none;
+        }
+    }
+    .text {
+        width: vmin(300);
+        @include font(vmin(14), 600, vmin(30));
+        padding-bottom: vmin(70);
+    }
+    .badge {
+        @include font(vmin(12), 800, vmin(20));
+        border-radius: vmin(30);
+        padding: vmin(5) vmin(12);
+    }
 }
